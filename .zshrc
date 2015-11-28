@@ -79,22 +79,10 @@ export LANG=en_US.UTF-8
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Check for Homebrew,
-# Install if we don't have it
-if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-# Update homebrew recipes
-#brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 
 export PATH=/usr/local/opt/ruby/bin:$PATH
 #export DISABLE_AUTO_TITLE="true"
 
-. ~/.bash/functions.sh
 
 alias gd="git difftool -y"
 alias sdr="screen -dR"
-alias nb="$HOME/Documents/scripts/nextBus/toOffice.sh"
-alias ctags="`brew --prefix`/bin/ctags"

@@ -5,7 +5,6 @@ ignorecase on
 # Make xterm scrolling work properly with screen.
 termcapinfo xterm-256color|xterm-color|xterm|xterms|xs|rxvt ti@:te@
 
-backtick 1 0 10 $HOME/Documents/scripts/countdown/remain_minutes.sh
 hardstatus alwayslastline "%{= kW}%-Lw%{= kG}%n* %t%{-}%+Lw %= %1` %= %c"
 
 register p 'DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )'
@@ -17,9 +16,7 @@ bind c screen 1
 bind ^c screen 1
 bind 0 select 10                                                            
 screen -t Vim 1
-
-chdir $HOME/Documents/scripts/countdown
-screen -t Countdown 2
+screen -t HOME 2
 screen -t Test 5
 
 chdir
